@@ -1,0 +1,35 @@
+.header {
+  @apply sticky top-0 py-4 transition-all z-50 border-b shadow bg-gray-100;
+
+  & .search {
+    @apply mb-8 lg:mb-4;
+
+    & .input {
+      @apply mx-auto lg:mx-0 lg:ml-auto;
+    }
+  }
+
+  & .navigation {
+    @apply flex flex-col items-center lg:flex-row lg:items-end lg:justify-between;
+
+    & .logo {
+      @apply mb-8 w-32 h-auto lg:mb-0;
+    }
+  }
+}
+
+.skip {
+  @apply absolute text-sm p-2;
+
+  top: -200px;
+  left: -200px;
+  z-index: 9999;
+  background: #fff;
+
+  &:focus {
+    @apply visible opacity-100;
+
+    top: 10px;
+    left: 10px;
+  }
+}
